@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}详情{% endblock %}
+
+{% block styles %}
+{{ super() }}
+{% endblock %}
+
+{% block page_content %}
+<ol class="breadcrumb">
+    <li><a href="shows.html">演出购票</a></li>
+    <li class="active">儿童芭蕾交响音乐会</li>
+</ol>
+
+<div class="m-single-article">
+    <div class="article-left">
+        <h3>儿童芭蕾交响音乐会<span> <i class="fa fa-heart"></i> 99%</span></h3>
+        <p><a class="m-green" href="#">芭蕾</a><a class="m-green" href="#">音乐</a><a class="m-orange"
+                                                                                  href="#">儿童剧</a></p>
+        <div class="clearfix"></div>
+        <div class="article-time-strip">
+            <div class="article-time-strip-left">
+                <p><span><i class="fa fa-clock-o"></i>14时-15时30分</span> &nbsp;&nbsp; <span><i
+                        class="fa fa-calendar"></i>2016年7月3日</span> &nbsp;&nbsp; <span>￥90 70 50</span></p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="article-img">
+                <img src="{{ url_for('static', filename='img/movie-show.jpg') }}" alt=""/>
+            </div>
+
+            <div class="review-info">
+
+                <p class="info"><strong>编导</strong>: &nbsp;&nbsp;张艺谋.</p>
+                <p class="info"><strong>团体</strong>: &nbsp;&nbsp;陕西民间艺术团.</p>
+                <p class="info"><strong>主演</strong>: &nbsp;&nbsp;陈小亮等.</p>
+                <p class="info"><strong>时长</strong>: &nbsp;&nbsp;90分钟</p>
+            </div>
+        </div>
+    </div>
+    <div class="article-right">
+        <div class="grid_3 grid_5">
+            <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                <ul id="showTimeTab" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab"
+                                                              data-toggle="tab" aria-controls="home"
+                                                              aria-expanded="true">7月-30</a></li>
+                    <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab"
+                                               aria-controls="profile">8月-1</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                        <p class="m-s-t">地点: 非遗大舞台, 西安</p>
+                        <p class="show-time">06:30 下午</p>
+                        <div class="clearfix"></div>
+                        <a class="more-show-time" href="movie-select-show.html">在线订票</a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                        <p class="m-s-t">地点: 非遗大舞台, 西安</p>
+                        <p class="show-time">12:45 下午</p>
+                        <div class="clearfix"></div>
+                        <a class="more-show-time" href="movie-select-show.html">在线订票</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="reviews-tabs">
+    <!-- Main component for a primary marketing message or call to action -->
+    <ul class="nav nav-tabs responsive hidden-xs hidden-sm" id="detailTab">
+        <li class="test-class active"><a class="deco-none misc-class" href="#how-to"> 简介</a></li>
+        <li><a class="deco-none" href="#source">留言 (11)</a></li>
+    </ul>
+
+    <div class="tab-content responsive hidden-xs hidden-sm">
+        <div class="tab-pane active" id="how-to">
+            <p><strong> Director :</strong> <a href="#">S.S. Rajamouli.</a></p>
+            <p><strong>Cast & Crew :</strong> <a href="#">Lorem ipsum</a> ,<a href="#">Lorem ipsum</a> ,<a
+                    href="#">Lorem ipsum</a>, <a href="#">Lorem ipsum</a>, <a href="#">Lorem ipsum</a>, <a
+                    href="#">Lorem ipsum</a></p>
+            <p>No content is available for this movie. Official sources can send relevant information to <br>
+                <a href="mail-to:mail@example.com">content@example.com</a></p>
+
+        </div>
+        <div class="tab-pane" id="source">
+            <div class="response">
+                <div class="media response-info">
+                    <div class="media-left response-text-left">
+                        <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/icon1.png') }}" alt="">
+                        </a>
+                        <h5><a href="#">Username</a></h5>
+                    </div>
+                    <div class="media-body response-text-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of
+                            passages of Lorem Ipsum available,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li>MARCH 21, 2015</li>
+                            <li><a href="single.html">Reply</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="media response-info">
+                    <div class="media-left response-text-left">
+                        <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/icon1.png') }}" alt="">
+                        </a>
+                        <h5><a href="#">Username</a></h5>
+                    </div>
+                    <div class="media-body response-text-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of
+                            passages of Lorem Ipsum available,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li>MARCH 25, 2014</li>
+                            <li><a href="single.html">Reply</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="media response-info">
+                    <div class="media-left response-text-left">
+                        <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/icon1.png') }}" alt="">
+                        </a>
+                        <h5><a href="#">Username</a></h5>
+                    </div>
+                    <div class="media-body response-text-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of
+                            passages of Lorem Ipsum available,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li>MARCH 25, 2014</li>
+                            <li><a href="single.html">Reply</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="media response-info">
+                    <div class="media-left response-text-left">
+                        <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/icon1.png') }}" alt="">
+                        </a>
+                        <h5><a href="#">Username</a></h5>
+                    </div>
+                    <div class="media-body response-text-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of
+                            passages of Lorem Ipsum available,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li>MARCH 25, 2014</li>
+                            <li><a href="single.html">Reply</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="media response-info">
+                    <div class="media-left response-text-left">
+                        <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/icon1.png') }}" alt="">
+                        </a>
+                        <h5><a href="#">Username</a></h5>
+                    </div>
+                    <div class="media-body response-text-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of
+                            passages of Lorem Ipsum available,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li>MARCH 25, 2014</li>
+                            <li><a href="single.html">Reply</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="media response-info">
+                    <div class="media-left response-text-left">
+                        <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/icon1.png') }}" alt="">
+                        </a>
+                        <h5><a href="#">Username</a></h5>
+                    </div>
+                    <div class="media-body response-text-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of
+                            passages of Lorem Ipsum available,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li>MARCH 25, 2014</li>
+                            <li><a href="single.html">Reply</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="media response-info">
+                    <div class="media-left response-text-left">
+                        <a href="#">
+                            <img class="media-object" src="{{ url_for('static', filename='img/icon1.png') }}" alt="">
+                        </a>
+                        <h5><a href="#">Username</a></h5>
+                    </div>
+                    <div class="media-body response-text-right">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of
+                            passages of Lorem Ipsum available,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li>MARCH 25, 2014</li>
+                            <li><a href="single.html">Reply</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='js/move-top.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/easing.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/responsive-tabs.js') }}"></script>
+
+
+<script type="application/x-javascript">addEventListener("load", function () {
+    setTimeout(hideURLbar, 0);
+}, false);
+function hideURLbar() {
+    window.scrollTo(0, 1);
+} </script>
+<!-- start menu -->
+<script>$(document).ready(function () {
+    $(".megamenu").megamenu();
+});</script>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+<!---- start-smoth-scrolling---->
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1200);
+        });
+    });
+
+    $('#showTimeTab a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
+    $('#detailTab a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
+    (function ($) {
+        // Test for making sure event are maintained
+        $('.js-alert-test').click(function () {
+            alert('Button Clicked: Event was maintained');
+        });
+        fakewaffle.responsiveTabs(['xs', 'sm']);
+    })(jQuery);
+
+    $(document).ready(function () {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({easingType: 'easeOutQuart'});
+
+    });
+</script>
+{% endblock %}

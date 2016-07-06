@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}非遗大舞台{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}" type="text/css" media="screen"/>
+{% endblock %}
+
+{% block page_content %}
+
+        <div class="main-banner">
+            <div class="banner col-md-8">
+                <section class="slider">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <img src="{{ url_for('static', filename='img/pic1.jpg') }}" class="img-responsive" alt=""/>
+                            </li>
+                            <li>
+                                <img src="{{ url_for('static', filename='img/pic2.jpg') }}" class="img-responsive" alt=""/>
+                            </li>
+                            <li>
+                                <img src="{{ url_for('static', filename='img/pic3.jpg') }}" class="img-responsive" alt=""/>
+                            </li>
+                            <li>
+                                <img src="{{ url_for('static', filename='img/pic4.jpg') }}" class="img-responsive" alt=""/>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- FlexSlider -->
+                <script defer src="{{ url_for('static', filename='js/jquery.flexslider.js') }}"></script>
+
+
+            </div>
+            <div class="col-md-4 banner-right">
+                <div class="top-movies-in-india">
+                    <h4>热门节目</h4>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>77%</li>
+                        <li><a href="movie-single.html">Jurassic World (3D) (U/A)</a></li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>80%</li>
+                        <li><a href="movie-single.html">Jurassic World (3D Hindi) (U/A)</a></li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>69%</li>
+                        <li><a href="movie-single.html">Dil Dhadakne Do (U/A)</a></li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>65%</li>
+                        <li><a href="movie-single.html">Hamari Adhuri Kahani (U)</a></li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>83%</li>
+                        <li><a href="movie-single.html">Premam (U)</a></li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>87%</li>
+                        <li><a href="movie-single.html">Tanu Weds Manu Returns (U/A)</a></li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>71%</li>
+                        <li><a href="movie-single.html">Romeo Juliet (U)</a></li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>81%</li>
+                        <li><a href="movie-single.html">Jurassic World (IMAX 3D) (U/A)</a></li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>80%</li>
+                        <li><a href="movie-single.html">Jurassic World (2D Hindi) (U/A)</a></li>
+                    </ul>
+                    <ul class="mov_list">
+                        <li><i class="fa fa-star"></i></li>
+                        <li>89%</li>
+                        <li><a href="movie-single.html">Kaaka Muttai (U)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+
+        <div class="footer-top-grid">
+            <div class="list-of-movies col-md-8">
+                <div class="featured">
+                    <h4>演出购票</h4>
+                    <ul>
+                        <li>
+                            <div class="f-movie">
+                                <div class="f-movie-img">
+                                    <a href="{{ url_for('main.info') }}"><img src="{{ url_for('static', filename='img/f4.jpg') }}" alt=""/></a>
+                                </div>
+                                <div class="f-movie-name">
+                                    <a href="{{ url_for('main.info') }}">比利时王牌吉他四重奏音乐会</a>
+                                    <p>07月02日 | ￥60 ~ 200</p>
+                                </div>
+                                <div class="f-buy-tickets">
+                                    <a href="movie-select-show.html">订票</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="f-movie">
+                                <div class="f-movie-img">
+                                    <a href="{{ url_for('main.info') }}"><img src="{{ url_for('static', filename='img/f5.jpg') }}" alt=""/></a>
+                                </div>
+                                <div class="f-movie-name">
+                                    <a href="{{ url_for('main.info') }}">岩井俊二和他的乐队西安音乐会</a>
+                                    <p>07月02日 | ￥60 ~ 200</p>
+                                </div>
+                                <div class="f-buy-tickets">
+                                    <a href="movie-select-show.html">订票</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="f-movie">
+                                <div class="f-movie-img">
+                                    <a href="{{ url_for('main.info') }}"><img src="{{ url_for('static', filename='img/f6.jpg') }}" alt=""/></a>
+                                </div>
+                                <div class="f-movie-name">
+                                    <a href="{{ url_for('main.info') }}">The Live Lorem Ipsum </a>
+                                    <p>Mumbai</p>
+                                </div>
+                                <div class="f-buy-tickets">
+                                    <a href="movie-select-show.html">订票</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="f-movie">
+                                <div class="f-movie-img">
+                                    <a href="{{ url_for('main.info') }}"><img src="{{ url_for('static', filename='img/f1.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="f-movie-name">
+                                    <a href="{{ url_for('main.info') }}">The standard chunk</a>
+                                    <p>Multi city</p>
+                                </div>
+                                <div class="f-buy-tickets">
+                                    <a href="movie-select-show.html">订票</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="f-movie">
+                                <div class="f-movie-img">
+                                    <a href="{{ url_for('main.info') }}"><img src="{{ url_for('static', filename='img/f2.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="f-movie-name">
+                                    <a href="{{ url_for('main.info') }}">There are many 'variations'</a>
+                                    <p>Multi city</p>
+                                </div>
+                                <div class="f-buy-tickets">
+                                    <a href="movie-select-show.html">订票</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="f-movie">
+                                <div class="f-movie-img">
+                                    <a href="{{ url_for('main.info') }}"><img src="{{ url_for('static', filename='img/f3.jpg') }}" alt=""></a>
+                                </div>
+                                <div class="f-movie-name">
+                                    <a href="{{ url_for('main.info') }}">The Live Tribute Show</a>
+                                    <p>Mumbai</p>
+                                </div>
+                                <div class="f-buy-tickets">
+                                    <a href="movie-select-show.html">订票</a>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="clearfix"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-side-bar">
+            <div class="our-blog">
+                <h5>最新资讯</h5>
+                <div class="post-article">
+                    <a href="blog.html" class="post-title">Lorem Ipsum is simply dummy text of the printing</a>
+                    <i>Posted on June 15, 2015</i>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        classical Latin literature from 45 BC, making it over 2000 years old...<br> <a href="blog.html">Read
+                            more</a></p>
+                </div>
+                <div class="post-article">
+                    <a href="blog.html" class="post-title">Sed ut perspiciatis unde</a>
+                    <i>Posted on June 15, 2015</i>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        classical Latin literature from 45 BC, making it over 2000 years old...<br> <a href="blog.html">Read
+                            more</a></p>
+                </div>
+                <div class="post-article">
+                    <a href="blog.html" class="post-title">Sed ut perspiciatis unde</a>
+                    <i>Posted on June 15, 2015</i>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        classical Latin literature from 45 BC, making it over 2000 years old...<br> <a href="blog.html">Read
+                            more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/easyResponsiveTabs.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/move-top.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/easing.js') }}"></script>
+
+    <script type="text/javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+        $(document).ready(function () {
+            $(".megamenu").megamenu();
+        });
+        $(document).ready(function () {
+            $('#horizontalPuppetTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+            $('#horizontalOtherTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+            $('#horizontalShadowTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+
+        });
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1200);
+            });
+        });
+
+
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+
+        <!-- start-smoth-scrolling -->
+        $(document).ready(function () {
+            /*
+             var defaults = {
+             containerID: 'toTop', // fading element id
+             containerHoverID: 'toTopHover', // fading element hover id
+             scrollSpeed: 1200,
+             easingType: 'linear'
+             };
+             */
+
+            $().UItoTop({easingType: 'easeOutQuart'});
+
+        });
+    </script>
+
+{% endblock %}
+
